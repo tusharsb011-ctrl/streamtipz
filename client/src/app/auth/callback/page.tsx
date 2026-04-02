@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import { Loader2 } from 'lucide-react'
@@ -70,7 +70,7 @@ async function getRedirectByRole(fallbackPath: string): Promise<string> {
     return fallbackPath
 }
 
-export default function AuthCallbackPage() {
+function AuthContent() {
     const router = useRouter()
     const searchParams = useSearchParams()
     const [error, setError] = useState<string | null>(null)
@@ -135,25 +135,38 @@ export default function AuthCallbackPage() {
     }, [router, searchParams])
 
     return (
+        <div className="text-center">
+            {error ? (
+                <div className="space-y-4">
+                    <div className="w-16 h-16 rounded-full bg-red-500/20 flex items-center justify-center mx-auto">
+                        <span className="text-red-400 text-2xl">✕</span>
+                    </div>
+                    <p className="text-red-400 font-bold text-lg">Authentication Failed</p>
+                    <p className="text-zinc-500 text-sm">{error}</p>
+                    <p className="text-zinc-600 text-xs">Redirecting to login...</p>
+                </div>
+            ) : (
+                <div className="space-y-4">
+                    <Loader2 size={48} className="animate-spin text-purple-500 mx-auto" />
+                    <p className="text-white font-bold text-lg">Signing you in...</p>
+                    <p className="text-zinc-500 text-sm">Please wait while we complete authentication</p>
+                </div>
+            )}
+        </div>
+    )
+}
+
+export default function AuthCallbackPage() {
+    return (
         <div className="min-h-screen bg-[#0B0B0F] flex items-center justify-center">
-            <div className="text-center">
-                {error ? (
-                    <div className="space-y-4">
-                        <div className="w-16 h-16 rounded-full bg-red-500/20 flex items-center justify-center mx-auto">
-                            <span className="text-red-400 text-2xl">✕</span>
-                        </div>
-                        <p className="text-red-400 font-bold text-lg">Authentication Failed</p>
-                        <p className="text-zinc-500 text-sm">{error}</p>
-                        <p className="text-zinc-600 text-xs">Redirecting to login...</p>
-                    </div>
-                ) : (
-                    <div className="space-y-4">
-                        <Loader2 size={48} className="animate-spin text-purple-500 mx-auto" />
-                        <p className="text-white font-bold text-lg">Signing you in...</p>
-                        <p className="text-zinc-500 text-sm">Please wait while we complete authentication</p>
-                    </div>
-                )}
-            </div>
+            <Suspense fallback={
+                <div className="text-center space-y-4">
+                    <Loader2 size={48} className="animate-spin text-purple-500 mx-auto" />
+                    <p className="text-white font-bold text-lg">Loading...</p>
+                </div>
+            }>
+                <AuthContent />
+            </Suspense>
         </div>
     )
 }

@@ -94,7 +94,7 @@ export const notificationApi = {
 // ── Creator Settings APIs ────────────────────
 export const creatorApi = {
     getSettings: () => authFetch('/api/creator/settings'),
-    updateSettings: (payload: { upi_id?: string; alert_sound?: string; alert_theme?: string }) =>
+    updateSettings: (payload: Record<string, any>) =>
         authFetch('/api/creator/settings', { method: 'PUT', body: JSON.stringify(payload) }),
 };
 

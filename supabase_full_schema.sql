@@ -10,6 +10,7 @@
 -- ── 1. Create `profiles` table ──────────
 CREATE TABLE IF NOT EXISTS public.profiles (
     id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
+    email TEXT,
     username TEXT UNIQUE,
     full_name TEXT,
     avatar_url TEXT,

@@ -1,0 +1,17 @@
+{
+  "name": "streamtip-gateway",
+  "version": "1.0.0",
+  "description": "Streaming tipping payment gateway with QR code support",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^4.18.2",
+    "qrcode": "^1.5.3",
+    "razorpay": "^2.9.6",
+    "uuid": "^9.0.0"
+  }
+}

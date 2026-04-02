@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StreamTip Streamer Dashboard — View your live tip feed and earnings.">
+  <title>Dashboard — StreamTip</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-blobs">
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="container-wide">
+
+      <div class="brand fade-in-up">
+        <div class="brand-icon">📊</div>
+        <h1>Streamer Dashboard</h1>
+        <p id="dashboard-subtitle">Your live tip feed</p>
+      </div>
+
+      <!-- Session Input -->
+      <div class="glass-card fade-in-up" id="session-input-card">
+        <div class="card-title">Enter Session ID</div>
+        <div class="card-subtitle">Paste the session ID from when you created your tipping session</div>
+
+        <div class="input-group">
+          <label for="session-id-input">Session ID</label>
+          <input type="text" id="session-id-input" class="input-field" placeholder="e.g. a1b2c3d4">
+        </div>
+
+        <button id="load-dashboard-btn" class="btn btn-primary btn-full">
+          📡 Load Dashboard
+        </button>
+      </div>
+
+      <!-- Stats Bar (hidden until loaded) -->
+      <div class="glass-card hidden" id="stats-section">
+        <div class="stats-bar stats-bar-5">
+          <div class="stat-item">
+            <div class="stat-value" id="stat-total">₹0.00</div>
+            <div class="stat-label">Total Collected</div>
+          </div>
+          <div class="stat-item stat-item-earnings">
+            <div class="stat-value" id="stat-creator">₹0.00</div>
+            <div class="stat-label">Creator Earnings</div>
+          </div>
+          <div class="stat-item stat-item-commission">
+            <div class="stat-value" id="stat-commission">₹0.00</div>
+            <div class="stat-label">Platform Fee</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="stat-count">0</div>
+            <div class="stat-label">Total Tips</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="stat-avg">₹0.00</div>
+            <div class="stat-label">Average Tip</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tip Feed (hidden until loaded) -->
+      <div class="glass-card hidden" id="feed-section">
+        <div class="section-label">Live Tip Feed</div>
+        <div class="tip-feed" id="tip-feed">
+          <div class="empty-state">
+            <div class="empty-icon">🎧</div>
+            <p>No tips yet — share your QR code to get started!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-links fade-in">
+        <a href="index.html">← Create New Session</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Payment verification status — StreamTip">
+  <title>Payment Status — StreamTip</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-blobs">
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="container">
+
+      <div class="brand fade-in-up">
+        <div class="brand-icon">🔒</div>
+        <h1>StreamTip</h1>
+        <p>Payment Verification</p>
+      </div>
+
+      <div class="glass-card fade-in-up">
+        <div class="status-display" id="status-display">
+          <!-- Pending State (default) -->
+          <div class="status-icon pending" id="status-icon">
+            <div class="spinner"></div>
+          </div>
+          <div class="status-text" id="status-text">Verifying Payment...</div>
+          <div class="status-subtext" id="status-subtext">
+            Please wait while we confirm your transaction
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-links fade-in">
+        <a href="index.html">← Back to Home</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/status.js"></script>
+</body>
+</html>

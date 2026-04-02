@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StreamTip — Accept tips from your viewers with a simple QR code. Instant, secure payments for live streamers.">
+  <title>StreamTip — Streaming Tipping Gateway</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Background Blobs -->
+  <div class="bg-blobs">
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="container">
+
+      <!-- Brand -->
+      <div class="brand fade-in-up">
+        <div class="brand-icon">⚡</div>
+        <h1>StreamTip</h1>
+        <p>Accept tips from viewers instantly with a QR code</p>
+      </div>
+
+      <!-- Create Session Card -->
+      <div class="glass-card fade-in-up" id="create-section">
+        <div class="card-title">Start a Tipping Session</div>
+        <div class="card-subtitle">Generate a unique QR code for your viewers to send tips</div>
+
+        <div class="input-group">
+          <label for="streamer-name">Your Streamer Name</label>
+          <input type="text" id="streamer-name" class="input-field" placeholder="e.g. NightOwlGaming">
+        </div>
+
+        <button id="create-btn" class="btn btn-primary btn-full">
+          🚀 Create Tipping Session
+        </button>
+      </div>
+
+      <!-- QR Result Card (hidden initially) -->
+      <div class="glass-card hidden" id="qr-section">
+        <div class="card-title" style="text-align:center;">Your Tipping QR Code</div>
+        <div class="card-subtitle" style="text-align:center;">Share this with your viewers to receive tips</div>
+
+        <div class="qr-container">
+          <img id="qr-image" src="" alt="QR Code" width="250" height="250">
+
+          <div class="tip-link">
+            <input type="text" id="tip-url" readonly>
+            <button class="copy-btn" id="copy-btn">Copy</button>
+          </div>
+        </div>
+
+        <div style="margin-top:20px;">
+          <a id="dashboard-link" href="#" class="btn btn-secondary btn-full">📊 Open Dashboard</a>
+        </div>
+      </div>
+
+      <!-- Nav -->
+      <div class="nav-links fade-in">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#">About</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

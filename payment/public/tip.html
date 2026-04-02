@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Send a tip to your favorite streamer via StreamTip — fast and secure.">
+  <title>Send a Tip — StreamTip</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="bg-blobs">
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="container">
+
+      <!-- Brand -->
+      <div class="brand fade-in-up">
+        <div class="brand-icon">💜</div>
+        <h1 id="streamer-title">Send a Tip</h1>
+        <p id="streamer-subtitle">Support your favorite streamer</p>
+      </div>
+
+      <!-- Tip Form -->
+      <div class="glass-card fade-in-up" id="tip-form">
+        <div class="card-title">Choose Amount</div>
+        <div class="card-subtitle">Select a preset or enter a custom amount</div>
+
+        <div class="amount-grid">
+          <button class="amount-btn" data-amount="10">₹10</button>
+          <button class="amount-btn" data-amount="50">₹50</button>
+          <button class="amount-btn active" data-amount="100">₹100</button>
+          <button class="amount-btn" data-amount="500">₹500</button>
+        </div>
+
+        <div class="input-group">
+          <label for="custom-amount">Or custom amount (₹)</label>
+          <input type="number" id="custom-amount" class="input-field" placeholder="Enter amount" min="1" step="1">
+        </div>
+
+        <div class="input-group">
+          <label for="tip-name">Your Name</label>
+          <input type="text" id="tip-name" class="input-field" placeholder="Anonymous">
+        </div>
+
+        <div class="input-group">
+          <label for="tip-message">Message (optional)</label>
+          <textarea id="tip-message" class="input-field" placeholder="Say something nice ✨"></textarea>
+        </div>
+
+        <button id="pay-btn" class="btn btn-primary btn-full">
+          💳 Pay Now
+        </button>
+      </div>
+
+      <!-- Nav -->
+      <div class="nav-links fade-in">
+        <a href="index.html">← Back to Home</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="js/tip.js"></script>
+</body>
+</html>

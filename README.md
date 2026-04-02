@@ -379,3 +379,76 @@ sequenceDiagram
 | 3 | Deploy frontend on Vercel | 3 min |
 | 4 | Update CORS & Supabase settings | 2 min |
 | **Total** | | **~12 min** |
+
+## Complete Deployment Guide (From Scratch)
+
+This guide walks you through deploying **StreamTipz**, specifically detailing how to set up the database and authentication layers assuming you are starting completely fresh.
+
+### Part 1: Supabase Setup (Database & Authentication)
+Supabase replaces traditional databases and complex authentication workflows by offering a Postgres Database and an Auth system out of the box.
+
+**Step 1: Create a Project**
+1. Go to [Supabase](https://supabase.com/) and sign up or log in.
+2. Click **New Project**, select an organization, and give your project a name (e.g., *StreamTipz*).
+3. Set a strong, secure database password and choose a region close to your target audience.
+4. Wait for the project database to be fully provisioned (takes ~2 minutes).
+
+**Step 2: Initialize the Database Schema (Important)**
+We have prepared a complete schema initialization file for you located at supabase_full_schema.sql at the root of the project.
+1. In your Supabase Dashboard, look to the left sidebar and click on **SQL Editor**.
+2. Click **New query**.
+3. Open the supabase_full_schema.sql file from your local computer, copy all of its text, and paste it into the editor.
+4. Click **Run**.
+*Success!* All your required tables (profiles, creator_settings, 	ips, payment_codes, payment_notifications), Row Level Security (RLS) policies, and Triggers are now properly initialized.
+
+**Step 3: Configure Authentication**
+1. Go to **Authentication** (left sidebar) -> **Providers**.
+2. **Email & Password**: Ensure this is enabled.
+3. **Google OAuth (Optional but Recommended)**: Enable the Google provider if you wish. You will need to obtain a Client ID and Client Secret from the Google Cloud Console.
+4. **URL Configuration**:
+   - Go to **Authentication** -> **URL Configuration**.
+   - Under **Site URL**, put your local frontend URL for now (http://localhost:3000).
+   - Under **Redirect URLs**, add http://localhost:3000/auth/callback.
+
+**Step 4: Gather Supabase Keys**
+1. Go to **Project Settings** (the gear icon) -> **API**.
+2. You will need the **Project URL**, the **anon public key**, and the **service_role secret key** for the backend/frontend configurations.
+
+### Part 2: Backend Deployment (Render)
+1. Commit all your latest code to your GitHub Repository.
+2. Log into [Render](https://render.com/).
+3. Click **New** -> **Web Service**.
+4. Connect the GitHub repository for this project.
+5. Setup the service details:
+   - **Name**: streamtipz-backend
+   - **Root Directory**: ackend
+   - **Environment**: Node
+   - **Build Command**: 
+pm install && npm run build
+   - **Start Command**: 
+pm run start 
+6. Add the following **Environment Variables**:
+   - NODE_ENV: production
+   - SUPABASE_URL: *(Your Supabase Project URL)*
+   - SUPABASE_SERVICE_ROLE_KEY: *(Your Supabase service_role key - KEEP THIS SECRET)*
+   - RAZORPAY_KEY_ID: *(Your Razorpay ID)*
+   - RAZORPAY_KEY_SECRET: *(Your Razorpay Secret)*
+   - CORS_ORIGIN: *
+7. Click **Deploy Web Service** and wait for the "Live" status. Copy your Render Backend URL.
+
+### Part 3: Frontend Deployment (Vercel)
+1. Log into [Vercel](https://vercel.com/) and click **Add New** -> **Project**.
+2. Import the GitHub repository for StreamTipz.
+3. In the project setup, set the **Framework Preset** to Next.js and **Root Directory** to client.
+4. Add the following **Environment Variables**:
+   - NEXT_PUBLIC_SERVER_URL: *(Your new Render Backend URL)*
+   - NEXT_PUBLIC_SUPABASE_URL: *(Your Supabase Project URL)*
+   - NEXT_PUBLIC_SUPABASE_ANON_KEY: *(Your Supabase anon public key)*
+   - NEXT_PUBLIC_RAZORPAY_KEY_ID: *(Your Razorpay ID)*
+5. Click **Deploy**. Vercel will process the build. Once finished, you will receive a Live URL.
+
+### Part 4: Finalizing Connections
+Now that both frontend and backend are live on the internet, secure their communication:
+1. **Verify Webhooks**: Go to your Razorpay Dashboard -> Top left "Test Mode" -> **Webhooks**. Add a webhook pointing to https://<YOUR-RENDER-BACKEND-URL>/api/tips/webhook. Listen for the payment.captured event.
+2. **Restrict CORS**: Go to the **Render Dashboard**, edit the streamtipz-backend environment variables, and change CORS_ORIGIN from * to https://<YOUR-VERCEL-FRONTEND-URL>.
+3. **Update Supabase Redirects**: Go to your **Supabase Dashboard** -> **Authentication** -> **URL Configuration**. Change your "Site URL" to your Vercel URL, and add https://<YOUR-VERCEL-FRONTEND-URL>/auth/callback to the Redirect URIs list.

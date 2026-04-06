@@ -16,7 +16,7 @@ export default function AboutPage() {
             <nav className="px-6 py-6 flex items-center justify-between border-b border-white/5 glass sticky top-0 z-50">
                 <Link href="/" className="flex items-center gap-2 group">
                     <ArrowLeft className="text-zinc-500 group-hover:text-white transition-colors" />
-                    <span className="font-black text-xl tracking-tighter">StreamTipz</span>
+                    <span className="font-black text-xl tracking-tighter">WaveTipz</span>
                 </Link>
                 <div className="flex gap-8 items-center text-sm font-bold uppercase tracking-widest text-zinc-500">
                     <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -35,10 +35,10 @@ export default function AboutPage() {
                     {/* Main Title */}
                     <div className="border-b border-white/5 pb-10">
                         <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8">
-                            About <span className="gradient-text">StreamTipz</span>
+                            About <span className="gradient-text">WaveTipz</span>
                         </h1>
                         <p className="text-zinc-500 text-lg leading-relaxed">
-                            Welcome to <strong className="text-white">StreamTipz</strong>, the ultimate monetization infrastructure built specifically for the Indian streaming ecosystem.
+                            Welcome to <strong className="text-white">WaveTipz</strong>, the ultimate monetization infrastructure built specifically for the Indian streaming ecosystem.
                             We bridge the gap between creators and fans with technology that feels like magic.
                         </p>
                     </div>
@@ -74,7 +74,7 @@ export default function AboutPage() {
                                     <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-black tracking-widest uppercase border border-primary/20">Lead Developer</span>
                                 </div>
                                 <p className="text-zinc-400 italic text-sm leading-relaxed mb-6">
-                                    "I built StreamTipz because I'm a creator first. I know the struggle of delayed payments and high fees. I wanted a system where the 'Tip Alert' feels instant, and the money hits your bank just as fast. This community is at the heart of everything we build."
+                                    "I built WaveTipz because I'm a creator first. I know the struggle of delayed payments and high fees. I wanted a system where the 'Tip Alert' feels instant, and the money hits your bank just as fast. This community is at the heart of everything we build."
                                 </p>
                                 <div className="text-xs font-black uppercase tracking-[0.2em] text-zinc-600">Developed with passion by Harshplay Community</div>
                             </div>

@@ -65,7 +65,7 @@ export function createServer(): Application {
     app.get('/', (_req: Request, res: Response) => {
         res.json({
             success: true,
-            message: '🚀 StreamTipz API is running!',
+            message: '🚀 WaveTipz API is running!',
             version: '1.0.0',
             docs: {
                 health: '/api/health',

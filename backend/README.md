@@ -1,6 +1,6 @@
-# 🚀 StreamTipz Backend API
+# 🚀 WaveTipz Backend API
 
-Production-grade backend for StreamTipz — a tipping platform for creators.  
+Production-grade backend for WaveTipz — a tipping platform for creators.  
 Powered by **Node.js + TypeScript + Express + Supabase**.
 
 ---

@@ -249,7 +249,7 @@ export default function SignupPage() {
                                         placeholder={role === 'creator' ? 'ninja_streamer' : 'CoolFan42'}
                                     />
                                     {role === 'creator' && (
-                                        <p className="text-[10px] text-zinc-600 font-bold uppercase tracking-widest">URL: streamtipz.in/{username || 'yourname'}</p>
+                                        <p className="text-[10px] text-zinc-600 font-bold uppercase tracking-widest">URL: wavetipz.in/{username || 'yourname'}</p>
                                     )}
                                 </div>
                                 <div className="space-y-2">

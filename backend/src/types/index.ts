@@ -1,5 +1,5 @@
 // ==========================================
-// StreamTipz Type Definitions
+// WaveTipz Type Definitions
 // ==========================================
 
 import { Request } from 'express';

@@ -16,7 +16,7 @@ export default function ContactPage() {
             <nav className="px-6 py-6 flex items-center justify-between border-b border-white/5 glass sticky top-0 z-50">
                 <Link href="/" className="flex items-center gap-2 group">
                     <ArrowLeft className="text-zinc-500 group-hover:text-white transition-colors" />
-                    <span className="font-black text-xl tracking-tighter">StreamTipz</span>
+                    <span className="font-black text-xl tracking-tighter">WaveTipz</span>
                 </Link>
                 <div className="flex gap-8 items-center text-sm font-bold uppercase tracking-widest text-zinc-500">
                     <Link href="/" className="hover:text-white transition-colors">Home</Link>

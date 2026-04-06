@@ -1,4 +1,4 @@
-# 💸 StreamTipz — Full-Stack Streaming Donation & Alert Platform
+# 💸 WaveTipz — Full-Stack Streaming Donation & Alert Platform
 
 > A premium, real-time tipping and alert management platform built for **Indian streamers & content creators**, enabling fans to send tips via UPI with instant on-screen alerts for OBS/Streamlabs.
 
@@ -6,7 +6,7 @@
 
 ## 📌 Project Overview
 
-**StreamTipz** is a complete web application designed to bridge the gap between Indian streamers and their supporters. The platform allows content creators (streamers) to set up personalized tipping pages where fans can send monetary tips using India's UPI payment system (Google Pay, PhonePe, Paytm, etc.). Each tip triggers a real-time animated alert that can be overlaid on the streamer's live broadcast through OBS Studio or Streamlabs.
+**WaveTipz** is a complete web application designed to bridge the gap between Indian streamers and their supporters. The platform allows content creators (streamers) to set up personalized tipping pages where fans can send monetary tips using India's UPI payment system (Google Pay, PhonePe, Paytm, etc.). Each tip triggers a real-time animated alert that can be overlaid on the streamer's live broadcast through OBS Studio or Streamlabs.
 
 The project follows a **modern full-stack architecture** with a clear separation between the frontend client, and two backend implementations — one using MongoDB and Socket.IO for real-time communication, and a production-grade TypeScript backend powered by Supabase (PostgreSQL).
 
@@ -43,7 +43,7 @@ The project follows a **modern full-stack architecture** with a clear separation
 The project uses a **three-tier architecture** with distinct folders for the frontend, a legacy server, and a production-grade backend:
 
 ```
-StreamTipz/
+WaveTipz/
 │
 ├── client/              # 🖥️  Next.js 14 Frontend (App Router)
 │   └── src/
@@ -210,7 +210,7 @@ StreamTipz/
 
 ## ⚡ Real-Time System
 
-StreamTipz uses **Socket.IO** for real-time communication between the backend and the alert widgets:
+WaveTipz uses **Socket.IO** for real-time communication between the backend and the alert widgets:
 
 1. **Streamer rooms** — When a widget loads for a streamer, it joins a Socket.IO room identified by the `streamerId`
 2. **Tip event flow**:
@@ -232,8 +232,8 @@ StreamTipz uses **Socket.IO** for real-time communication between the backend an
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/streamtipz.git
-cd streamtipz
+git clone https://github.com/your-username/wavetipz.git
+cd wavetipz
 ```
 
 ### 2. Setup the Backend

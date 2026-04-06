@@ -26,7 +26,7 @@ export default function AdminDashboard() {
                 </div>
                 <div>
                     <h1 className="text-4xl font-black uppercase tracking-tighter">System Admin</h1>
-                    <p className="text-zinc-500 font-medium">Control center for StreamTipz.in</p>
+                    <p className="text-zinc-500 font-medium">Control center for WaveTipz.in</p>
                 </div>
             </header>
 

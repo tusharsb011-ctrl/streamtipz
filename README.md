@@ -1,4 +1,4 @@
-# StreamTipz - Full Stack Streaming Alert & Donation Platform
+# WaveTipz - Full Stack Streaming Alert & Donation Platform
 
 A premium, modern web application for streamers to manage tips and real-time alerts.
 
@@ -49,7 +49,7 @@ A premium, modern web application for streamers to manage tips and real-time ale
 5. Create database user (username & password).
 6. **Whitelist IP**: Allow access from anywhere (`0.0.0.0/0`) for development.
 7. Copy the MongoDB connection URI.
-   *Example: `mongodb+srv://username:password@cluster0.mongodb.net/streamtipz`*
+   *Example: `mongodb+srv://username:password@cluster0.mongodb.net/wavetipz`*
 
 ---
 
@@ -92,7 +92,7 @@ A premium, modern web application for streamers to manage tips and real-time ale
 
 ### 5️⃣ Folder Structure (Manual Verification)
 ```text
-StreamTipz/
+WaveTipz/
 │
 ├── client/          # Next.js Frontend
 │   ├── src/app/     # Pages & Routing
@@ -119,7 +119,7 @@ StreamTipz/
 - `/admin` - System Admin Panel
 - `/widget/[streamerId]` - Alert Widget (Overlay for OBS)
 
-# 🚀 StreamTipz Deployment Guide
+# 🚀 WaveTipz Deployment Guide
 
 ## Architecture Overview
 
@@ -163,10 +163,10 @@ cd c:\Users\ranjeeta\Downloads\tipz
 # Initialize git (if not already done)
 git init
 git add .
-git commit -m "Initial commit - StreamTipz"
+git commit -m "Initial commit - WaveTipz"
 
 # Create a repo on GitHub, then:
-git remote add origin https://github.com/YOUR_USERNAME/streamtipz.git
+git remote add origin https://github.com/YOUR_USERNAME/wavetipz.git
 git branch -M main
 git push -u origin main
 ```
@@ -201,7 +201,7 @@ dist
 
 | Setting | Value |
 |---------|-------|
-| **Name** | `streamtipz-api` |
+| **Name** | `wavetipz-api` |
 | **Region** | Pick closest to your users (Singapore for India) |
 | **Root Directory** | `backend` |
 | **Runtime** | `Node` |
@@ -229,7 +229,7 @@ Click **"Create Web Service"**. Render will build and deploy automatically.
 
 Your backend URL will be something like:
 ```
-https://streamtipz-api.onrender.com
+https://wavetipz-api.onrender.com
 ```
 
 > [!NOTE]
@@ -260,7 +260,7 @@ https://streamtipz-api.onrender.com
 
 | Variable | Value |
 |----------|-------|
-| `NEXT_PUBLIC_SERVER_URL` | `https://streamtipz-api.onrender.com` ← *your Render URL* |
+| `NEXT_PUBLIC_SERVER_URL` | `https://wavetipz-api.onrender.com` ← *your Render URL* |
 | `NEXT_PUBLIC_SUPABASE_URL` | `https://pefbtibpovosunxkramv.supabase.co` |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | *(your Supabase anon key)* |
 | `NEXT_PUBLIC_RAZORPAY_KEY_ID` | *(your production Razorpay key ID)* |
@@ -268,11 +268,11 @@ https://streamtipz-api.onrender.com
 ### 3.4 — Deploy
 Click **"Deploy"**. Vercel will build and give you a URL like:
 ```
-https://streamtipz.vercel.app
+https://wavetipz.vercel.app
 ```
 
 > [!IMPORTANT]
-> After getting your Vercel URL, go back to **Render** and update the `CORS_ORIGIN` environment variable to match your Vercel URL (e.g., `https://streamtipz.vercel.app`). Then redeploy the backend.
+> After getting your Vercel URL, go back to **Render** and update the `CORS_ORIGIN` environment variable to match your Vercel URL (e.g., `https://wavetipz.vercel.app`). Then redeploy the backend.
 
 ---
 
@@ -281,7 +281,7 @@ https://streamtipz.vercel.app
 ### 4.1 — Update CORS on Backend
 Go to Render → Environment Variables → set:
 ```
-CORS_ORIGIN=https://streamtipz.vercel.app
+CORS_ORIGIN=https://wavetipz.vercel.app
 ```
 Then **manually redeploy**.
 
@@ -290,7 +290,7 @@ Then **manually redeploy**.
 2. Navigate to **Authentication** → **URL Configuration**
 3. Add your Vercel URL to **Site URL** and **Redirect URLs**:
    ```
-   https://streamtipz.vercel.app
+   https://wavetipz.vercel.app
    ```
 
 ### 4.3 — Update Razorpay Webhook (if using)
@@ -298,12 +298,12 @@ Then **manually redeploy**.
 2. Navigate to **Settings** → **Webhooks**
 3. Add your backend URL:
    ```
-   https://streamtipz-api.onrender.com/api/tips/verify-payment
+   https://wavetipz-api.onrender.com/api/tips/verify-payment
    ```
 
 ### 4.4 — Custom Domain (Optional)
-- **Vercel**: Settings → Domains → Add your domain (e.g., `streamtipz.com`)
-- **Render**: Settings → Custom Domains → Add your API domain (e.g., `api.streamtipz.com`)
+- **Vercel**: Settings → Domains → Add your domain (e.g., `wavetipz.com`)
+- **Render**: Settings → Custom Domains → Add your API domain (e.g., `api.wavetipz.com`)
 
 ---
 
@@ -311,10 +311,10 @@ Then **manually redeploy**.
 
 ```bash
 # Test backend health
-curl https://streamtipz-api.onrender.com/api/health
+curl https://wavetipz-api.onrender.com/api/health
 
 # Then open the frontend
-# https://streamtipz.vercel.app
+# https://wavetipz.vercel.app
 ```
 
 Try:
@@ -365,9 +365,9 @@ sequenceDiagram
     
     You->>GitHub: Push code
     You->>Render: Connect repo, set root=backend
-    Render-->>You: https://streamtipz-api.onrender.com
+    Render-->>You: https://wavetipz-api.onrender.com
     You->>Vercel: Connect repo, set root=client
-    Vercel-->>You: https://streamtipz.vercel.app
+    Vercel-->>You: https://wavetipz.vercel.app
     You->>Render: Update CORS_ORIGIN to Vercel URL
     You->>Vercel: Done! 🎉
 ```
@@ -382,14 +382,14 @@ sequenceDiagram
 
 ## Complete Deployment Guide (From Scratch)
 
-This guide walks you through deploying **StreamTipz**, specifically detailing how to set up the database and authentication layers assuming you are starting completely fresh.
+This guide walks you through deploying **WaveTipz**, specifically detailing how to set up the database and authentication layers assuming you are starting completely fresh.
 
 ### Part 1: Supabase Setup (Database & Authentication)
 Supabase replaces traditional databases and complex authentication workflows by offering a Postgres Database and an Auth system out of the box.
 
 **Step 1: Create a Project**
 1. Go to [Supabase](https://supabase.com/) and sign up or log in.
-2. Click **New Project**, select an organization, and give your project a name (e.g., *StreamTipz*).
+2. Click **New Project**, select an organization, and give your project a name (e.g., *WaveTipz*).
 3. Set a strong, secure database password and choose a region close to your target audience.
 4. Wait for the project database to be fully provisioned (takes ~2 minutes).
 
@@ -420,7 +420,7 @@ We have prepared a complete schema initialization file for you located at supaba
 3. Click **New** -> **Web Service**.
 4. Connect the GitHub repository for this project.
 5. Setup the service details:
-   - **Name**: streamtipz-backend
+   - **Name**: wavetipz-backend
    - **Root Directory**: ackend
    - **Environment**: Node
    - **Build Command**: 
@@ -438,7 +438,7 @@ pm run start
 
 ### Part 3: Frontend Deployment (Vercel)
 1. Log into [Vercel](https://vercel.com/) and click **Add New** -> **Project**.
-2. Import the GitHub repository for StreamTipz.
+2. Import the GitHub repository for WaveTipz.
 3. In the project setup, set the **Framework Preset** to Next.js and **Root Directory** to client.
 4. Add the following **Environment Variables**:
    - NEXT_PUBLIC_SERVER_URL: *(Your new Render Backend URL)*
@@ -450,5 +450,5 @@ pm run start
 ### Part 4: Finalizing Connections
 Now that both frontend and backend are live on the internet, secure their communication:
 1. **Verify Webhooks**: Go to your Razorpay Dashboard -> Top left "Test Mode" -> **Webhooks**. Add a webhook pointing to https://<YOUR-RENDER-BACKEND-URL>/api/tips/webhook. Listen for the payment.captured event.
-2. **Restrict CORS**: Go to the **Render Dashboard**, edit the streamtipz-backend environment variables, and change CORS_ORIGIN from * to https://<YOUR-VERCEL-FRONTEND-URL>.
+2. **Restrict CORS**: Go to the **Render Dashboard**, edit the wavetipz-backend environment variables, and change CORS_ORIGIN from * to https://<YOUR-VERCEL-FRONTEND-URL>.
 3. **Update Supabase Redirects**: Go to your **Supabase Dashboard** -> **Authentication** -> **URL Configuration**. Change your "Site URL" to your Vercel URL, and add https://<YOUR-VERCEL-FRONTEND-URL>/auth/callback to the Redirect URIs list.

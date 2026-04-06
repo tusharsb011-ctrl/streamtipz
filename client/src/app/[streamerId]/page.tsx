@@ -177,9 +177,9 @@ export default function StreamerPage() {
                 key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID, 
                 amount: orderData.data.amount, 
                 currency: "INR",
-                name: "StreamTipz",
+                name: "WaveTipz",
                 description: `Tip to ${displayName}`,
-                image: creator.avatar_url || "https://api.dicebear.com/7.x/avataaars/svg?seed=streamtipz",
+                image: creator.avatar_url || "https://api.dicebear.com/7.x/avataaars/svg?seed=wavetipz",
                 order_id: orderData.data.order_id, 
                 handler: async function (response: any) {
                     try {

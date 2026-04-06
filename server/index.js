@@ -36,7 +36,7 @@ io.on('connection', (socket) => {
 
 // Basic Route
 app.get('/', (req, res) => {
-    res.send('StreamTipz API is running...');
+    res.send('WaveTipz API is running...');
 });
 
 // Routes

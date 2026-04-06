@@ -26,7 +26,7 @@ export default function LandingPage() {
           <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center shadow-lg glow-primary">
             <span className="text-white font-black text-xl">₹</span>
           </div>
-          <div className="text-2xl font-black tracking-tighter text-white">StreamTipz</div>
+          <div className="text-2xl font-black tracking-tighter text-white">WaveTipz</div>
         </div>
 
         <div className="hidden md:flex gap-8 items-center text-sm font-medium text-zinc-400">
@@ -148,7 +148,7 @@ export default function LandingPage() {
       <section className="py-32 px-6 bg-[#09090D]">
         <div className="max-w-6xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase">Live Leaderboard</h2>
-          <p className="text-zinc-500 max-w-xl mx-auto">See who is leading the charts in the StreamTipz community.</p>
+          <p className="text-zinc-500 max-w-xl mx-auto">See who is leading the charts in the WaveTipz community.</p>
         </div>
 
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -204,7 +204,7 @@ export default function LandingPage() {
               <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
                 <span className="text-white font-black text-sm">₹</span>
               </div>
-              <div className="text-xl font-black text-white">StreamTipz</div>
+              <div className="text-xl font-black text-white">WaveTipz</div>
             </div>
             <p className="text-zinc-500 text-sm leading-relaxed mb-6">
               Empowering Indian creators to monetize their passion with seamless UPI integration and real-time streaming alerts.

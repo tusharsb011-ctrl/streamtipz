@@ -193,7 +193,7 @@ export default function ViewerDashboard() {
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-600 to-rose-600 flex items-center justify-center shadow-lg">
                         <Heart size={20} className="text-white" />
                     </div>
-                    StreamTipz
+                    WaveTipz
                 </div>
 
                 {/* Profile Mini Card */}

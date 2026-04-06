@@ -68,15 +68,14 @@ export default function ContactPage() {
                     {/* Get in Touch Section */}
                     <div className="flex flex-col lg:flex-row items-center gap-16 pt-10">
                         {/* Image Side */}
-                        <div className="w-full lg:w-1/2 relative group">
-                            <div className="absolute -inset-4 gradient-bg blur-3xl opacity-10 group-hover:opacity-20 transition-opacity rounded-full"></div>
-                            <div className="aspect-square rounded-full overflow-hidden border-8 border-white/5 shadow-2xl relative">
+                        <div className="w-full lg:w-1/2 relative group hidden lg:block">
+                            <div className="absolute -inset-4 gradient-bg blur-3xl opacity-10 group-hover:opacity-20 transition-opacity rounded-3xl"></div>
+                            <div className="rounded-3xl overflow-hidden relative group-hover:-translate-y-2 transition-transform duration-500">
                                 <img
-                                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=ClassicHarsh"
-                                    alt="Harsh"
-                                    className="w-full h-full object-cover bg-[#1A1A24]"
+                                    src="/contact-us.png"
+                                    alt="Contact Us Support"
+                                    className="w-full h-auto object-contain"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0F] to-transparent opacity-40"></div>
                             </div>
                         </div>
 

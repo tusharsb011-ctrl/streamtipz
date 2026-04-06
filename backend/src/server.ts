@@ -30,9 +30,22 @@ export function createServer(): Application {
     app.use(helmet());
 
     // ── CORS ────────────────────────────────────
+    const allowedOrigins = [
+        'http://localhost:3000',
+        'https://thewavetips.tech',
+        'https://www.thewavetips.tech',
+        ...(process.env.CORS_ORIGIN ? [process.env.CORS_ORIGIN] : []),
+    ];
     app.use(
         cors({
-            origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+            origin: (origin, callback) => {
+                // Allow requests with no origin (mobile apps, curl, etc.)
+                if (!origin || allowedOrigins.includes(origin)) {
+                    callback(null, true);
+                } else {
+                    callback(new Error('Not allowed by CORS'));
+                }
+            },
             methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
             allowedHeaders: ['Content-Type', 'Authorization'],
             credentials: true,

@@ -72,7 +72,7 @@ export default function ContactPage() {
                             <div className="absolute -inset-4 gradient-bg blur-3xl opacity-10 group-hover:opacity-20 transition-opacity rounded-3xl"></div>
                             <div className="rounded-3xl overflow-hidden relative group-hover:-translate-y-2 transition-transform duration-500">
                                 <img
-                                    src="/contact-us.png"
+                                    src="/cu.png"
                                     alt="Contact Us Support"
                                     className="w-full h-auto object-contain"
                                 />

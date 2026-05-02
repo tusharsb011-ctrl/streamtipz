@@ -57,27 +57,34 @@ export default function AboutPage() {
                         </p>
                     </section>
 
-                    {/* Founder Spotlight */}
-                    <section className="relative group">
-                        <div className="absolute -inset-1 gradient-bg blur opacity-10 rounded-[40px]"></div>
-                        <div className="glass rounded-[32px] p-8 border border-white/10 flex flex-col md:flex-row items-center gap-10">
-                            <div className="w-48 h-48 rounded-[24px] overflow-hidden border-2 border-white/10 shrink-0 shadow-2xl">
-                                <img
-                                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=Harshplay"
-                                    alt="Founder"
-                                    className="w-full h-full bg-[#1A1A24] object-cover"
-                                />
-                            </div>
-                            <div>
-                                <div className="flex items-center gap-3 mb-4">
-                                    <h3 className="text-2xl font-black uppercase tracking-tighter">Harshplay</h3>
-                                    <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-black tracking-widest uppercase border border-primary/20">Lead Developer</span>
+                    {/* Our Team */}
+                    <section className="space-y-6">
+                        <div className="flex items-center gap-3">
+                            <div className="w-1.5 h-8 gradient-bg rounded-full"></div>
+                            <h2 className="text-2xl font-black uppercase tracking-tight">Our Team</h2>
+                        </div>
+                        <p className="text-zinc-400 text-sm leading-relaxed">
+                            WaveTips is built by a passionate team of developers who believe in empowering Indian creators with world-class technology.
+                        </p>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            {[
+                                { name: 'Tushar Singh', role: 'Developer', seed: 'Tushar' },
+                                { name: 'Harshit Prajapati Bhardwaj', role: 'Developer', seed: 'Harshit' },
+                                { name: 'Vaibhav Pandey', role: 'Developer', seed: 'Vaibhav' },
+                                { name: 'Anoop Kumar', role: 'Developer', seed: 'Anoop' },
+                            ].map((member) => (
+                                <div key={member.seed} className="glass rounded-2xl p-5 border border-white/5 text-center hover:border-primary/30 transition-all group">
+                                    <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-white/10 mx-auto mb-3 shadow-lg">
+                                        <img
+                                            src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${member.seed}`}
+                                            alt={member.name}
+                                            className="w-full h-full bg-[#1A1A24] object-cover"
+                                        />
+                                    </div>
+                                    <h3 className="text-sm font-black uppercase tracking-tight group-hover:text-primary transition-colors">{member.name}</h3>
+                                    <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">{member.role}</span>
                                 </div>
-                                <p className="text-zinc-400 italic text-sm leading-relaxed mb-6">
-                                    "I built WaveTips because I'm a creator first. I know the struggle of delayed payments and high fees. I wanted a system where the 'Tip Alert' feels instant, and the money hits your bank just as fast. This community is at the heart of everything we build."
-                                </p>
-                                <div className="text-xs font-black uppercase tracking-[0.2em] text-zinc-600">Developed with passion by Harshplay Community</div>
-                            </div>
+                            ))}
                         </div>
                     </section>
 
@@ -111,10 +118,10 @@ export default function AboutPage() {
             <footer className="mt-32 text-center py-12 border-t border-white/5">
                 <div className="flex items-center justify-center gap-2 mb-6 grayscale opacity-30">
                     <Users size={18} />
-                    <span className="text-xs font-black uppercase tracking-[0.3em]">Harshplay Community Ecosystem</span>
+                    <span className="text-xs font-black uppercase tracking-[0.3em]">WaveTips Team</span>
                 </div>
                 <p className="text-zinc-600 text-[10px] font-black uppercase tracking-widest">
-                    Designed & Developed by Harshplay Community • 2026
+                    Developed by Tushar Singh, Harshit Prajapati Bhardwaj, Vaibhav Pandey & Anoop Kumar • 2026
                 </p>
             </footer>
         </div>

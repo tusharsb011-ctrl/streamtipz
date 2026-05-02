@@ -138,10 +138,10 @@ export default function ContactPage() {
             <footer className="mt-32 text-center py-12 border-t border-white/5">
                 <div className="flex items-center justify-center gap-2 mb-6 grayscale opacity-30">
                     <Users size={18} />
-                    <span className="text-xs font-black uppercase tracking-[0.3em]">Harshplay Community Ecosystem</span>
+                    <span className="text-xs font-black uppercase tracking-[0.3em]">WaveTips Team</span>
                 </div>
                 <p className="text-zinc-600 text-[10px] font-black uppercase tracking-widest">
-                    Designed & Developed by Harshplay Community • 2026
+                    Developed by Tushar Singh, Harshit Prajapati Bhardwaj, Vaibhav Pandey & Anoop Kumar • 2026
                 </p>
             </footer>
         </div>

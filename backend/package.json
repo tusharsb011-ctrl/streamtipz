@@ -16,7 +16,7 @@
     "creator"
   ],
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "@supabase/supabase-js": "^2.49.1",
     "@types/cors": "^2.8.17",

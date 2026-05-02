@@ -209,7 +209,7 @@ export default function LandingPage() {
             <p className="text-zinc-500 text-sm leading-relaxed mb-6">
               Empowering Indian creators to monetize their passion with seamless UPI integration and real-time streaming alerts.
             </p>
-            <p className="text-primary font-bold text-sm">Made with 💜 for the Harshplay Community.</p>
+            <p className="text-primary font-bold text-sm">Made with 💜 by Tushar, Harshit, Vaibhav & Anoop.</p>
           </div>
 
           <div>
@@ -243,7 +243,7 @@ export default function LandingPage() {
 
         <div className="max-w-7xl mx-auto px-6 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-zinc-600 text-xs font-bold uppercase tracking-widest">
-            Copyright © 2026 - Developed by Harshplay Community
+            Copyright © 2026 - Developed by Tushar, Harshit, Vaibhav & Anoop
           </p>
           <div className="flex gap-8 text-zinc-600">
             <Globe size={18} className="hover:text-white cursor-pointer" />

@@ -297,13 +297,12 @@ The frontend features a **premium dark-themed** design with:
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License**.
-
----
-
 ## 👨‍💻 Credits
 
-Developed by the **Harshplay Community**  
+Developed by:
+- **Tushar Singh**
+- **Harshit Prajapati Bhardwaj**
+- **Vaibhav Pandey**
+- **Anoop Kumar**
+
 Copyright © 2026 — Made with 💜 for Indian Creators

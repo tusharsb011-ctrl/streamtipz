@@ -1,5 +1,5 @@
 -- ==========================================
--- WaveTipz — Full Supabase Database Schema
+-- WaveTips — Full Supabase Database Schema
 -- ==========================================
 -- Instructions: 
 -- 1. Create a new Supabase project at https://database.supabase.com/

@@ -1,5 +1,5 @@
 -- ==========================================
--- WaveTipz — QR Payment Code Migration
+-- WaveTips — QR Payment Code Migration
 -- ==========================================
 -- Run this SQL in the Supabase SQL Editor
 -- to create the new tables and update the

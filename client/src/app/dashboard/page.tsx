@@ -146,7 +146,7 @@ export default function Dashboard() {
 
     const displayName = profile?.full_name || user.user_metadata?.username || user.email?.split('@')[0] || 'Creator';
     const username = profile?.username || user.user_metadata?.username || 'yourname';
-    const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'wavetipz.in';
+    const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'WaveTips.in';
     const tipLink = `${baseUrl}/${username}`;
     const earnings = stats.total * 0.92; // 92% after 8% fee
 
@@ -182,7 +182,7 @@ export default function Dashboard() {
                     <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center shadow-lg glow-primary">
                         <span className="text-white font-black text-xl">₹</span>
                     </div>
-                    WaveTipz
+                    WaveTips
                 </div>
 
                 {/* Profile Mini Card */}
@@ -242,7 +242,7 @@ export default function Dashboard() {
                     <p className="text-zinc-500 font-medium">Check your dashboard & manage your account</p>
                 </motion.header>
 
-                {/* Shop URL Bar — WaveTipz Style */}
+                {/* Shop URL Bar — WaveTips Style */}
                 <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -351,7 +351,7 @@ export default function Dashboard() {
                     </div>
                 </motion.div>
 
-                {/* Tab Navigation — WaveTipz Style */}
+                {/* Tab Navigation — WaveTips Style */}
                 <div className="flex gap-2 mb-6 p-1.5 rounded-2xl glass border border-white/5 w-fit">
                     {[
                         { id: 'dashboard' as const, icon: <LayoutDashboard size={16} />, label: 'Dashboard' },
@@ -375,7 +375,7 @@ export default function Dashboard() {
                     ))}
                 </div>
 
-                {/* Recent Transactions — WaveTipz Style */}
+                {/* Recent Transactions — WaveTips Style */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

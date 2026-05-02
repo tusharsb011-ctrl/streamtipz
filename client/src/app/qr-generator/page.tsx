@@ -119,7 +119,7 @@ export default function QRGenerator() {
     };
 
     // ── Non-logged-in: plain UPI QR ──
-    const plainQrData = `upi://pay?pa=${upiId}&pn=${displayName || 'WaveTipz'}${amount ? `&am=${amount}` : ''}&cu=INR`;
+    const plainQrData = `upi://pay?pa=${upiId}&pn=${displayName || 'WaveTips'}${amount ? `&am=${amount}` : ''}&cu=INR`;
     const plainQrUrl = upiId ? `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(plainQrData)}` : null;
 
     return (
@@ -128,7 +128,7 @@ export default function QRGenerator() {
             <nav className="px-6 py-6 flex items-center justify-between border-b border-white/5 backdrop-blur-xl bg-[#0B0B0F]/80 sticky top-0 z-50">
                 <Link href="/" className="flex items-center gap-2 group">
                     <ArrowLeft className="text-zinc-500 group-hover:text-white transition-colors" />
-                    <span className="font-black text-xl tracking-tighter text-white">WaveTipz</span>
+                    <span className="font-black text-xl tracking-tighter text-white">WaveTips</span>
                 </Link>
                 <div className="hidden md:flex gap-8 items-center text-sm font-bold uppercase tracking-widest text-zinc-500">
                     <Link href="/" className="hover:text-white transition-colors">Home</Link>

@@ -1,6 +1,6 @@
-# 🚀 WaveTipz Backend API
+# 🚀 WaveTips Backend API
 
-Production-grade backend for WaveTipz — a tipping platform for creators.  
+Production-grade backend for WaveTips — a tipping platform for creators.  
 Powered by **Node.js + TypeScript + Express + Supabase**.
 
 ---

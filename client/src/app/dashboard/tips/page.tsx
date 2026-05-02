@@ -104,7 +104,7 @@ export default function TipsHistoryPage() {
                     <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center shadow-lg glow-primary">
                         <span className="text-white font-black text-xl">₹</span>
                     </div>
-                    WaveTipz
+                    WaveTips
                 </div>
 
                 <div className="space-y-1">

@@ -78,7 +78,7 @@ export function createServer(): Application {
     app.get('/', (_req: Request, res: Response) => {
         res.json({
             success: true,
-            message: '🚀 WaveTipz API is running!',
+            message: '🚀 WaveTips API is running!',
             version: '1.0.0',
             docs: {
                 health: '/api/health',

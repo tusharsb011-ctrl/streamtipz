@@ -238,7 +238,7 @@ export default function SettingsPage() {
                     <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center shadow-lg glow-primary">
                         <span className="text-white font-black text-xl">₹</span>
                     </div>
-                    WaveTipz
+                    WaveTips
                 </div>
 
                 <div className="space-y-1">
@@ -309,7 +309,7 @@ export default function SettingsPage() {
                     <div>
                         <p className="text-xs font-black uppercase tracking-widest text-zinc-500 mb-1">Your Tip Link</p>
                         <p className="text-lg font-bold text-white">
-                            {typeof window !== 'undefined' ? window.location.origin : 'wavetipz.in'}/{profile?.username || 'yourname'}
+                            {typeof window !== 'undefined' ? window.location.origin : 'WaveTips.in'}/{profile?.username || 'yourname'}
                         </p>
                     </div>
                     <div className="flex gap-3">

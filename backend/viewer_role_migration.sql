@@ -1,5 +1,5 @@
 -- ==========================================
--- WaveTipz: Viewer/Creator Role Migration
+-- WaveTips: Viewer/Creator Role Migration
 -- Run this in Supabase SQL Editor
 -- ==========================================
 

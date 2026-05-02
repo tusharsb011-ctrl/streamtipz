@@ -36,7 +36,7 @@ io.on('connection', (socket) => {
 
 // Basic Route
 app.get('/', (req, res) => {
-    res.send('WaveTipz API is running...');
+    res.send('WaveTips API is running...');
 });
 
 // Routes

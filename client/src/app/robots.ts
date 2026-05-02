@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/dashboard/', '/admin/', '/login', '/signup'],
     },
-    sitemap: 'https://wavetipz.tech/sitemap.xml',
+    sitemap: 'https://WaveTips.tech/sitemap.xml',
   };
 }

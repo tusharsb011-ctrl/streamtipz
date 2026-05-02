@@ -1,5 +1,5 @@
 // ==========================================
-// WaveTipz Backend — Entry Point
+// WaveTips Backend — Entry Point
 // ==========================================
 
 import dotenv from 'dotenv';
@@ -15,7 +15,7 @@ const app = createServer();
 app.listen(PORT, () => {
     console.log('');
     console.log('🚀 ═══════════════════════════════════════════');
-    console.log(`🚀  WaveTipz Backend is LIVE!`);
+    console.log(`🚀  WaveTips Backend is LIVE!`);
     console.log(`🚀  Port:        ${PORT}`);
     console.log(`🚀  Environment: ${process.env.NODE_ENV || 'development'}`);
     console.log(`🚀  Health:      http://localhost:${PORT}/api/health`);

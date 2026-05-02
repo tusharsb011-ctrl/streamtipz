@@ -13,27 +13,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WaveTipz - Support Your Favorite Streamers",
-  description: "WaveTipz is the premier platform for empowering creators. Send tips, support streamers, and grow the gaming broadcast ecosystem.",
-  keywords: ["streaming", "gaming", "donations", "tips", "creators", "WaveTipz", "support streamers"],
+  title: "WaveTips - Support Your Favorite Streamers",
+  description: "WaveTips is the premier platform for empowering creators. Send tips, support streamers, and grow the gaming broadcast ecosystem.",
+  keywords: ["streaming", "gaming", "donations", "tips", "creators", "WaveTips", "support streamers"],
   openGraph: {
-    title: "WaveTipz - Empowering Creators",
-    description: "Support your favorite content creators directly with WaveTipz. Join our community today.",
-    url: "https://wavetipz.tech",
-    siteName: "WaveTipz",
+    title: "WaveTips - Empowering Creators",
+    description: "Support your favorite content creators directly with WaveTips. Join our community today.",
+    url: "https://WaveTips.tech",
+    siteName: "WaveTips",
     images: [{
-      url: "https://wavetipz.tech/contact-us.png",
+      url: "https://WaveTips.tech/contact-us.png",
       width: 1200,
       height: 630,
-      alt: "WaveTipz Support"
+      alt: "WaveTips Support"
     }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "WaveTipz - Support Your Favorite Streamers",
-    description: "WaveTipz is the premier platform for empowering creators.",
-    images: ["https://wavetipz.tech/contact-us.png"],
+    title: "WaveTips - Support Your Favorite Streamers",
+    description: "WaveTips is the premier platform for empowering creators.",
+    images: ["https://WaveTips.tech/contact-us.png"],
   },
   robots: "index, follow",
 };
